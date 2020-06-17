@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="Sud-22-CTc">
             <objects>
-                <viewController id="CwU-FA-AgN" sceneMemberID="viewController">
+                <viewController id="CwU-FA-AgN" customClass="WelcomeViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yks-I2-kgg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,15 +69,18 @@
                         <viewLayoutGuide key="safeArea" id="knh-7M-A0q"/>
                     </view>
                     <navigationItem key="navigationItem" id="wKy-Cl-DtO"/>
+                    <connections>
+                        <outlet property="loginButton" destination="NMo-yA-9r5" id="Wkc-zd-gl3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbX-ej-61J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="-415"/>
+            <point key="canvasLocation" x="-154" y="-439"/>
         </scene>
         <!--Login-->
         <scene sceneID="1VV-CT-JHQ">
             <objects>
-                <viewController id="7GX-Sa-efB" sceneMemberID="viewController">
+                <viewController id="7GX-Sa-efB" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ksl-5o-Yvb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +108,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButtonAction" destination="7GX-Sa-efB" eventType="touchUpInside" id="ghT-tx-5nH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -118,15 +124,21 @@
                         <viewLayoutGuide key="safeArea" id="Q5I-NH-tra"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="Eqf-cY-3TA"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="n1D-0a-AOa" id="JYT-tK-dpd"/>
+                        <outlet property="loginButton" destination="JiH-70-8Np" id="K0T-mG-AyL"/>
+                        <outlet property="passwordTextField" destination="L5r-8W-NDT" id="LQU-eO-vOa"/>
+                        <segue destination="F4A-mD-gIZ" kind="presentation" identifier="showHome" modalPresentationStyle="fullScreen" id="Yeq-9d-cpH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Z1-XP-1yd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650.72463768115949" y="-415.17857142857139"/>
+            <point key="canvasLocation" x="651" y="-439"/>
         </scene>
         <!--Sign up-->
         <scene sceneID="mAV-lo-KkF">
             <objects>
-                <viewController id="nZV-GP-h0s" sceneMemberID="viewController">
+                <viewController id="nZV-GP-h0s" customClass="RegisterViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ve5-kH-urx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,6 +150,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <connections>
+                                            <action selector="emailTextField:" destination="Njl-l8-iaR" eventType="editingDidEnd" id="wui-TU-me5"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnV-zJ-4aL">
                                         <rect key="frame" x="0.0" y="49" width="374" height="34"/>
@@ -159,6 +174,9 @@
                                         <state key="normal" title="Sign up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerButtonAction:" destination="nZV-GP-h0s" eventType="touchUpInside" id="1cD-Ht-en1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -172,10 +190,18 @@
                         <viewLayoutGuide key="safeArea" id="n9C-24-cYv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign up" id="m4n-4f-fe6"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="KfY-Kc-8r1" id="EU1-wr-ub9"/>
+                        <outlet property="nameTextField" destination="xnV-zJ-4aL" id="3gX-cf-NnA"/>
+                        <outlet property="passwordTextField" destination="NzY-D7-3bJ" id="dfs-1H-I9g"/>
+                        <outlet property="registerButton" destination="1rg-Wi-i5w" id="rse-qk-FuR"/>
+                        <segue destination="F4A-mD-gIZ" kind="presentation" identifier="showHome" modalPresentationStyle="fullScreen" id="xTw-VJ-D4T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8L-ho-VZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Njl-l8-iaR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="650.72463768115949" y="304.6875"/>
+            <point key="canvasLocation" x="651" y="323"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tYN-p2-QJD">
@@ -195,5 +221,16 @@
             </objects>
             <point key="canvasLocation" x="-933" y="-415"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="lzB-dk-y7F">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="F4A-mD-gIZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wJ-Tv-Uel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359" y="-71"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Yeq-9d-cpH"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -15,6 +15,21 @@
 		246E27BA249725270034B91B /* TwitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27B9249725270034B91B /* TwitterUITests.swift */; };
 		246E27C82497254B0034B91B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 246E27C72497254A0034B91B /* Podfile */; };
 		246E27CD24972C420034B91B /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246E27CC24972C420034B91B /* Welcome.storyboard */; };
+		246E27CF249743D50034B91B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27CE249743D50034B91B /* WelcomeViewController.swift */; };
+		246E27D1249743E80034B91B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27D0249743E80034B91B /* LoginViewController.swift */; };
+		246E27D3249743FA0034B91B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27D2249743FA0034B91B /* RegisterViewController.swift */; };
+		246E27D62498F1740034B91B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246E27D52498F1740034B91B /* Home.storyboard */; };
+		246E27DB2498FCFE0034B91B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27DA2498FCFE0034B91B /* LoginResponse.swift */; };
+		246E27DD2498FD5B0034B91B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27DC2498FD5B0034B91B /* ErrorResponse.swift */; };
+		246E27DF2498FD870034B91B /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27DE2498FD860034B91B /* GeneralResponse.swift */; };
+		246E27E12498FDD20034B91B /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27E02498FDD20034B91B /* RegisterRequest.swift */; };
+		246E27E32498FDF00034B91B /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27E22498FDF00034B91B /* PostRequest.swift */; };
+		246E27E52498FDFF0034B91B /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27E42498FDFF0034B91B /* LoginRequest.swift */; };
+		246E27E72498FE140034B91B /* PostRequestLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27E62498FE140034B91B /* PostRequestLocation.swift */; };
+		246E27E92498FEEA0034B91B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27E82498FEEA0034B91B /* User.swift */; };
+		246E27EB2498FF2D0034B91B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27EA2498FF2D0034B91B /* Post.swift */; };
+		246E27ED2498FFB60034B91B /* PostLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27EC2498FFB60034B91B /* PostLocation.swift */; };
+		246E27EF2499001F0034B91B /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27EE2499001F0034B91B /* EndPoints.swift */; };
 		2CEFA7A7C4EAB10D626109D8 /* Pods_TwitterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E39F3F59BA5A613D343A5E8 /* Pods_TwitterTests.framework */; };
 		4478DBC64635124EE8BEED15 /* Pods_Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B49C3D367BF8A03C71BC244 /* Pods_Twitter.framework */; };
 		6B3E73BB06A8DEADFF120EE9 /* Pods_Twitter_TwitterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23FCE88C44123C1AC8D183D /* Pods_Twitter_TwitterUITests.framework */; };
@@ -52,6 +67,21 @@
 		246E27BB249725270034B91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		246E27C72497254A0034B91B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		246E27CC24972C420034B91B /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		246E27CE249743D50034B91B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		246E27D0249743E80034B91B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/ivanmosquera/Desktop/curso ios/Twitter/Twitter/Modules/Welcome/LoginViewController.swift"; sourceTree = "<absolute>"; };
+		246E27D2249743FA0034B91B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		246E27D52498F1740034B91B /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		246E27DA2498FCFE0034B91B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		246E27DC2498FD5B0034B91B /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		246E27DE2498FD860034B91B /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		246E27E02498FDD20034B91B /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		246E27E22498FDF00034B91B /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
+		246E27E42498FDFF0034B91B /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		246E27E62498FE140034B91B /* PostRequestLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestLocation.swift; sourceTree = "<group>"; };
+		246E27E82498FEEA0034B91B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		246E27EA2498FF2D0034B91B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		246E27EC2498FFB60034B91B /* PostLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocation.swift; sourceTree = "<group>"; };
+		246E27EE2499001F0034B91B /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		3CCB0C675B526F0D64E4F63B /* Pods-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.debug.xcconfig"; path = "Target Support Files/Pods-Twitter/Pods-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
 		44610B340C155CFCB28F332E /* Pods-TwitterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterTests.debug.xcconfig"; path = "Target Support Files/Pods-TwitterTests/Pods-TwitterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B49C3D367BF8A03C71BC244 /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,10 +175,12 @@
 		246E27C924972BB50034B91B /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				246E27D72498F3B90034B91B /* Models */,
 				246E2797249725220034B91B /* AppDelegate.swift */,
 				246E27A0249725260034B91B /* Assets.xcassets */,
 				246E27A2249725260034B91B /* LaunchScreen.storyboard */,
 				246E279B249725220034B91B /* ViewController.swift */,
+				246E27EE2499001F0034B91B /* EndPoints.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -156,6 +188,7 @@
 		246E27CA24972BD40034B91B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				246E27D42498F1560034B91B /* Home */,
 				246E27CB24972C1B0034B91B /* Welcome */,
 			);
 			path = Modules;
@@ -165,8 +198,52 @@
 			isa = PBXGroup;
 			children = (
 				246E27CC24972C420034B91B /* Welcome.storyboard */,
+				246E27D0249743E80034B91B /* LoginViewController.swift */,
+				246E27CE249743D50034B91B /* WelcomeViewController.swift */,
+				246E27D2249743FA0034B91B /* RegisterViewController.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		246E27D42498F1560034B91B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				246E27D52498F1740034B91B /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		246E27D72498F3B90034B91B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				246E27D92498FC480034B91B /* Requests */,
+				246E27D82498FC3F0034B91B /* Responses */,
+				246E27E82498FEEA0034B91B /* User.swift */,
+				246E27EA2498FF2D0034B91B /* Post.swift */,
+				246E27EC2498FFB60034B91B /* PostLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		246E27D82498FC3F0034B91B /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				246E27DA2498FCFE0034B91B /* LoginResponse.swift */,
+				246E27DC2498FD5B0034B91B /* ErrorResponse.swift */,
+				246E27DE2498FD860034B91B /* GeneralResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		246E27D92498FC480034B91B /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				246E27E02498FDD20034B91B /* RegisterRequest.swift */,
+				246E27E22498FDF00034B91B /* PostRequest.swift */,
+				246E27E42498FDFF0034B91B /* LoginRequest.swift */,
+				246E27E62498FE140034B91B /* PostRequestLocation.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		614EEEAF037A26A35BF77502 /* Pods */ = {
@@ -302,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				246E27A4249725260034B91B /* LaunchScreen.storyboard in Resources */,
+				246E27D62498F1740034B91B /* Home.storyboard in Resources */,
 				246E27CD24972C420034B91B /* Welcome.storyboard in Resources */,
 				246E27A1249725260034B91B /* Assets.xcassets in Resources */,
 				246E27C82497254B0034B91B /* Podfile in Resources */,
@@ -432,8 +510,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246E27E92498FEEA0034B91B /* User.swift in Sources */,
+				246E27E72498FE140034B91B /* PostRequestLocation.swift in Sources */,
+				246E27D1249743E80034B91B /* LoginViewController.swift in Sources */,
+				246E27D3249743FA0034B91B /* RegisterViewController.swift in Sources */,
+				246E27E12498FDD20034B91B /* RegisterRequest.swift in Sources */,
+				246E27EB2498FF2D0034B91B /* Post.swift in Sources */,
+				246E27DB2498FCFE0034B91B /* LoginResponse.swift in Sources */,
+				246E27CF249743D50034B91B /* WelcomeViewController.swift in Sources */,
 				246E279C249725220034B91B /* ViewController.swift in Sources */,
+				246E27DF2498FD870034B91B /* GeneralResponse.swift in Sources */,
+				246E27E32498FDF00034B91B /* PostRequest.swift in Sources */,
+				246E27ED2498FFB60034B91B /* PostLocation.swift in Sources */,
 				246E2798249725220034B91B /* AppDelegate.swift in Sources */,
+				246E27DD2498FD5B0034B91B /* ErrorResponse.swift in Sources */,
+				246E27EF2499001F0034B91B /* EndPoints.swift in Sources */,
+				246E27E52498FDFF0034B91B /* LoginRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
