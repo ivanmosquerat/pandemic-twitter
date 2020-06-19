@@ -51,13 +51,14 @@ class LoginViewController: UIViewController {
         
         SVProgressHUD.show()
         
-        SN.post(endpoint: EndPoints.login, model: request) { ( resposne: SNResultWithEntity<LoginResponse, ErrorResponse>) in
+        SN.post(endpoint: EndPoints.login, model: request) { ( response: SNResultWithEntity<LoginResponse, ErrorResponse>) in
             
             SVProgressHUD.dismiss()
-            switch resposne{
+            switch response{
                 
-            case .success(response: let response):
+            case .success(response: let user):
                 self.performSegue(withIdentifier: "showHome", sender: nil)
+                SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)
                 
             case .error(error: let error):
                 NotificationBanner(title: "Error", subtitle: error.localizedDescription, style: .danger).show()
