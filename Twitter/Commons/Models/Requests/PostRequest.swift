@@ -12,5 +12,5 @@ struct PostRequest: Codable{
     let text:String
     let imageUrl:String?
     let videUrl:String?
-    let location: PostRequestLocation
+    let location: PostRequestLocation?
 }

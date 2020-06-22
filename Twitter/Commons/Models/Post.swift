@@ -14,9 +14,14 @@ struct Post: Codable{
     let imageUrl: String
     let text: String
     let videoUrl: String
-    let location:String
+    let location: Location
     let hasVideo: Bool
     let hasImage: Bool
     let hasLocation: Bool
     let createdAt: String
+}
+
+struct Location: Codable{
+    let latitude: Double
+    let longitude: Double
 }

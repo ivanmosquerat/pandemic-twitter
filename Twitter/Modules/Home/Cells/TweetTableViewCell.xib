@@ -38,8 +38,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ub7-y9-5w2">
-                                <rect key="frame" x="0.0" y="91.5" width="326" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ub7-y9-5w2">
+                                <rect key="frame" x="0.0" y="91.5" width="359" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="sRf-AA-cjF"/>
                                 </constraints>
@@ -62,9 +62,11 @@
                             <constraint firstItem="941-4w-TsG" firstAttribute="leading" secondItem="QRK-jJ-X4g" secondAttribute="leading" id="5Xk-td-Ktq"/>
                             <constraint firstItem="WK7-Sf-J8q" firstAttribute="leading" secondItem="QRK-jJ-X4g" secondAttribute="leading" id="Dvf-tH-1hN"/>
                             <constraint firstAttribute="trailing" secondItem="DrZ-ep-fK9" secondAttribute="trailing" id="FSe-S8-6I3"/>
+                            <constraint firstItem="ub7-y9-5w2" firstAttribute="leading" secondItem="QRK-jJ-X4g" secondAttribute="leading" id="Ffx-cY-PHe"/>
                             <constraint firstItem="7cY-20-RL7" firstAttribute="leading" secondItem="QRK-jJ-X4g" secondAttribute="leading" id="IZJ-1P-7Ih"/>
                             <constraint firstItem="a16-KY-hKk" firstAttribute="leading" secondItem="QRK-jJ-X4g" secondAttribute="leading" id="K2y-PO-L8P"/>
                             <constraint firstAttribute="trailing" secondItem="941-4w-TsG" secondAttribute="trailing" id="Km5-W9-6iw"/>
+                            <constraint firstAttribute="trailing" secondItem="ub7-y9-5w2" secondAttribute="trailing" id="RSi-B7-thr"/>
                             <constraint firstAttribute="trailing" secondItem="7cY-20-RL7" secondAttribute="trailing" id="bSt-SF-Mgw"/>
                             <constraint firstAttribute="trailing" secondItem="WK7-Sf-J8q" secondAttribute="trailing" id="fYI-Q0-a8s"/>
                             <constraint firstAttribute="trailing" secondItem="a16-KY-hKk" secondAttribute="trailing" id="myI-sn-Pae"/>

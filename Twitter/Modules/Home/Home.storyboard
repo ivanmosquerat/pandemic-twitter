@@ -20,12 +20,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nee-dU-93s">
+                                <rect key="frame" x="338" y="812" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="evn-G8-Edf" kind="presentation" modalPresentationStyle="fullScreen" id="t1Z-LF-TnF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="bw0-KD-yGS" firstAttribute="trailing" secondItem="iJM-kj-Ykd" secondAttribute="trailing" id="Hhq-oG-CJZ"/>
+                            <constraint firstItem="Nee-dU-93s" firstAttribute="trailing" secondItem="iJM-kj-Ykd" secondAttribute="trailing" constant="-30" id="HjA-6O-0PB"/>
                             <constraint firstItem="bw0-KD-yGS" firstAttribute="leading" secondItem="iJM-kj-Ykd" secondAttribute="leading" id="XVP-fs-4D0"/>
                             <constraint firstAttribute="bottom" secondItem="bw0-KD-yGS" secondAttribute="bottom" id="lA6-1g-shf"/>
+                            <constraint firstItem="iJM-kj-Ykd" firstAttribute="bottom" secondItem="Nee-dU-93s" secondAttribute="bottom" constant="20" id="tRZ-rR-Kbk"/>
                             <constraint firstItem="bw0-KD-yGS" firstAttribute="top" secondItem="s8f-I3-db8" secondAttribute="top" id="yLY-ev-YaS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iJM-kj-Ykd"/>
@@ -38,6 +47,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcr-6y-Uzt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="875.36231884057975" y="-42.1875"/>
+        </scene>
+        <!--Add Post View Controller-->
+        <scene sceneID="wdQ-MU-YXi">
+            <objects>
+                <viewController id="evn-G8-Edf" customClass="AddPostViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ShB-Iw-zde">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nuevo Tweet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVg-xz-UVw">
+                                <rect key="frame" x="20" y="64" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhY-AM-c9j">
+                                <rect key="frame" x="351" y="68.5" width="43" height="30"/>
+                                <state key="normal" title="Volver"/>
+                                <connections>
+                                    <action selector="dismissAction:" destination="evn-G8-Edf" eventType="touchUpInside" id="eI7-lD-Ypt"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p4S-CD-DOI">
+                                <rect key="frame" x="20" y="112.5" width="374" height="227"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YZ2-ez-Ce3">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.2500267551369863" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="0Ie-8W-vGc"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKF-GY-qrv">
+                                        <rect key="frame" x="0.0" y="140" width="374" height="22"/>
+                                        <state key="normal" image="camera.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="openCameraAction" destination="evn-G8-Edf" eventType="touchUpInside" id="mge-2Y-HO5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87E-Bt-WiG">
+                                        <rect key="frame" x="0.0" y="182" width="374" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="uoj-Gh-fAX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Publicar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addPostAction:" destination="evn-G8-Edf" eventType="touchUpInside" id="bsn-sV-NEC"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yw4-f5-04u">
+                                        <rect key="frame" x="0.0" y="227" width="374" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="a84-K5-ger"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gbF-h8-VVN" firstAttribute="trailing" secondItem="p4S-CD-DOI" secondAttribute="trailing" constant="20" id="RpQ-V9-StS"/>
+                            <constraint firstItem="gbF-h8-VVN" firstAttribute="trailing" secondItem="fhY-AM-c9j" secondAttribute="trailing" constant="20" id="dhO-B7-dBo"/>
+                            <constraint firstItem="XVg-xz-UVw" firstAttribute="top" secondItem="gbF-h8-VVN" secondAttribute="top" constant="20" id="idW-2r-88o"/>
+                            <constraint firstItem="fhY-AM-c9j" firstAttribute="centerY" secondItem="XVg-xz-UVw" secondAttribute="centerY" id="kZU-tW-UH9"/>
+                            <constraint firstItem="XVg-xz-UVw" firstAttribute="leading" secondItem="gbF-h8-VVN" secondAttribute="leading" constant="20" id="kka-RA-xR9"/>
+                            <constraint firstItem="p4S-CD-DOI" firstAttribute="top" secondItem="XVg-xz-UVw" secondAttribute="bottom" constant="10" id="poY-KN-aGb"/>
+                            <constraint firstItem="p4S-CD-DOI" firstAttribute="leading" secondItem="gbF-h8-VVN" secondAttribute="leading" constant="20" id="sxQ-OD-Vpt"/>
+                            <constraint firstItem="gbF-h8-VVN" firstAttribute="trailing" secondItem="XVg-xz-UVw" secondAttribute="trailing" constant="20" id="uLL-L8-ISf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gbF-h8-VVN"/>
+                    </view>
+                    <connections>
+                        <outlet property="postButton" destination="87E-Bt-WiG" id="uvO-5y-ueJ"/>
+                        <outlet property="postTextView" destination="YZ2-ez-Ce3" id="LmM-6k-a2Z"/>
+                        <outlet property="previewImageView" destination="Yw4-f5-04u" id="jOH-0K-XRR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37K-YV-yo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1601" y="-42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Za-az-q08">
@@ -58,4 +154,7 @@
             <point key="canvasLocation" x="-34.782608695652179" y="-42.1875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
+    </resources>
 </document>
