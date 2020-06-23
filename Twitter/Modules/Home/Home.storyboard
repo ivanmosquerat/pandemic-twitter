@@ -89,6 +89,15 @@
                                             <action selector="openCameraAction" destination="evn-G8-Edf" eventType="touchUpInside" id="mge-2Y-HO5"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cal-QG-2ul">
+                                        <rect key="frame" x="0.0" y="172" width="374" height="0.0"/>
+                                        <state key="normal" title="Ver video">
+                                            <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openPreviewAction" destination="evn-G8-Edf" eventType="touchUpInside" id="t4j-vT-cAS"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87E-Bt-WiG">
                                         <rect key="frame" x="0.0" y="182" width="374" height="45"/>
                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,6 +138,7 @@
                         <outlet property="postButton" destination="87E-Bt-WiG" id="uvO-5y-ueJ"/>
                         <outlet property="postTextView" destination="YZ2-ez-Ce3" id="LmM-6k-a2Z"/>
                         <outlet property="previewImageView" destination="Yw4-f5-04u" id="jOH-0K-XRR"/>
+                        <outlet property="videoButton" destination="Cal-QG-2ul" id="M3S-5o-lCd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37K-YV-yo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
