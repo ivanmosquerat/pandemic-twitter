@@ -14,6 +14,7 @@ import FirebaseStorage
 import AVFoundation
 import AVKit
 import MobileCoreServices
+import  CoreLocation
 
 class AddPostViewController: UIViewController {
     
@@ -26,7 +27,17 @@ class AddPostViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func addPostAction(_ sender: Any) {
-        uploadPhotoToFirebase()
+        if currentVideoUrl != nil{
+            uploadVideoToFirebase()
+            return
+        }
+        
+        if previewImageView.image != nil{
+            uploadPhotoToFirebase()
+            return
+        }
+        
+        savePost(imageUrl: nil, videoUrl: nil)
     }
     
     @IBAction func dismissAction(_ sender: Any) {
@@ -66,15 +77,30 @@ class AddPostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        videoButton.isHidden = true
+        requestLocation()
     }
     
     // MARK: - Properties
-    
     private var imagePicker: UIImagePickerController?
     private var currentVideoUrl: URL?
+    private var locationManager: CLLocationManager?
+    private var userLocation: CLLocation?
     
     // MARK: - Private methods
+    
+    private func requestLocation(){
+        //Validar que tenga el gps ctivo.
+        guard CLLocationManager.locationServicesEnabled() else{
+            return
+        }
+        
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.startUpdatingLocation()
+    }
     
     private func openVideoCamera(){
         imagePicker = UIImagePickerController()
@@ -206,12 +232,22 @@ class AddPostViewController: UIViewController {
     
     private func savePost(imageUrl: String?, videoUrl: String?){
         
+        var postLocation: PostRequestLocation?
+        
+        if let userLocation = userLocation {
+            postLocation = PostRequestLocation(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        }
+        
+        
         guard let postText = postTextView.text, !postText.isEmpty else{
-            
             return
         }
         
-        let request = PostRequest(text: postText, imageUrl: imageUrl, videUrl: videoUrl, location: nil)
+        let request = PostRequest(text: postText,
+                                  imageUrl: imageUrl,
+                                  videUrl: videoUrl,
+                                  location: postLocation)
+        
         SVProgressHUD.show()
         
         SN.post(endpoint: EndPoints.post, model: request) { (response: SNResultWithEntity<Post, ErrorResponse>) in
@@ -254,6 +290,19 @@ extension AddPostViewController: UIImagePickerControllerDelegate, UINavigationCo
             videoButton.isHidden = false
             currentVideoUrl = recordedVideoUrl
         }
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension AddPostViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let bestLocation = locations.last else {
+            return
+        }
+        
+        //Ya tenemos la ubicacion del usuario.
+        userLocation = bestLocation
     }
 }
 

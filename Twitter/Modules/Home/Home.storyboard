@@ -39,14 +39,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iJM-kj-Ykd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tweets" id="Zbf-l5-dJb"/>
+                    <navigationItem key="navigationItem" title="Tweets" id="Zbf-l5-dJb">
+                        <barButtonItem key="rightBarButtonItem" title="Ver mapa" id="LH9-3D-0S9">
+                            <connections>
+                                <segue destination="DyM-fa-weu" kind="show" id="vBq-qM-biF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bw0-KD-yGS" id="j1y-lT-mSO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcr-6y-Uzt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875.36231884057975" y="-42.1875"/>
+            <point key="canvasLocation" x="703" y="-42"/>
         </scene>
         <!--Add Post View Controller-->
         <scene sceneID="wdQ-MU-YXi">
@@ -143,7 +149,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37K-YV-yo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="-42"/>
+            <point key="canvasLocation" x="1459" y="-42"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="7tO-hM-TQ6">
+            <objects>
+                <viewController id="DyM-fa-weu" customClass="MapViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mPj-IT-sYp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UX-Pl-P4U">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1UX-Pl-P4U" firstAttribute="leading" secondItem="eQV-Ku-DFx" secondAttribute="leading" id="6pt-GA-o7m"/>
+                            <constraint firstItem="eQV-Ku-DFx" firstAttribute="trailing" secondItem="1UX-Pl-P4U" secondAttribute="trailing" id="8uQ-hF-MXa"/>
+                            <constraint firstItem="1UX-Pl-P4U" firstAttribute="top" secondItem="eQV-Ku-DFx" secondAttribute="top" id="98q-Uj-52V"/>
+                            <constraint firstItem="eQV-Ku-DFx" firstAttribute="bottom" secondItem="1UX-Pl-P4U" secondAttribute="bottom" constant="-34" id="qXI-GG-C46"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eQV-Ku-DFx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mapa" id="hXY-E1-q6L"/>
+                    <connections>
+                        <outlet property="mapContainer" destination="1UX-Pl-P4U" id="CI2-0x-cHd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a6f-Iy-G2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457.9710144927537" y="-705.13392857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Za-az-q08">
