@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" title="Tweets" id="Zbf-l5-dJb">
                         <barButtonItem key="rightBarButtonItem" title="Ver mapa" id="LH9-3D-0S9">
                             <connections>
-                                <segue destination="DyM-fa-weu" kind="show" id="vBq-qM-biF"/>
+                                <segue destination="DyM-fa-weu" kind="show" identifier="showMap" id="vBq-qM-biF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

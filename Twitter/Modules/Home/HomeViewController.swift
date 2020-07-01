@@ -136,3 +136,13 @@ extension HomeViewController: UITableViewDataSource{
         return cell
     }
 }
+
+// MARK: - Navigation
+extension HomeViewController{
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap", let mapViewController = segue.destination as? MapViewController {
+            mapViewController.posts = dataSource.filter{ $0.hasLocation }
+        }
+    }
+}
