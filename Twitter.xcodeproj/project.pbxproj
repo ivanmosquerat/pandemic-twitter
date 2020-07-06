@@ -36,6 +36,8 @@
 		246E27F9249FA05D0034B91B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E27F8249FA05D0034B91B /* AddPostViewController.swift */; };
 		246E27FB24A0C40B0034B91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 246E27FA24A0C40B0034B91B /* GoogleService-Info.plist */; };
 		24A431B224A630C300F53E43 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A431B124A630C300F53E43 /* MapViewController.swift */; };
+		24A4322D24B213D600F53E43 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A4322C24B213D600F53E43 /* Profile.storyboard */; };
+		24A4322F24B2F5E500F53E43 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A4322E24B2F5E500F53E43 /* ProfileViewController.swift */; };
 		2CEFA7A7C4EAB10D626109D8 /* Pods_TwitterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E39F3F59BA5A613D343A5E8 /* Pods_TwitterTests.framework */; };
 		4478DBC64635124EE8BEED15 /* Pods_Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B49C3D367BF8A03C71BC244 /* Pods_Twitter.framework */; };
 		6B3E73BB06A8DEADFF120EE9 /* Pods_Twitter_TwitterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23FCE88C44123C1AC8D183D /* Pods_Twitter_TwitterUITests.framework */; };
@@ -94,6 +96,8 @@
 		246E27F8249FA05D0034B91B /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		246E27FA24A0C40B0034B91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24A431B124A630C300F53E43 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		24A4322C24B213D600F53E43 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		24A4322E24B2F5E500F53E43 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3CCB0C675B526F0D64E4F63B /* Pods-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.debug.xcconfig"; path = "Target Support Files/Pods-Twitter/Pods-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
 		44610B340C155CFCB28F332E /* Pods-TwitterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterTests.debug.xcconfig"; path = "Target Support Files/Pods-TwitterTests/Pods-TwitterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B49C3D367BF8A03C71BC244 /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +205,7 @@
 		246E27CA24972BD40034B91B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24A4322B24B213AD00F53E43 /* Profile */,
 				246E27D42498F1560034B91B /* Home */,
 				246E27CB24972C1B0034B91B /* Welcome */,
 			);
@@ -270,6 +275,15 @@
 				246E27F5249C96CC0034B91B /* TweetTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		24A4322B24B213AD00F53E43 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				24A4322C24B213D600F53E43 /* Profile.storyboard */,
+				24A4322E24B2F5E500F53E43 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		614EEEAF037A26A35BF77502 /* Pods */ = {
@@ -406,6 +420,7 @@
 			files = (
 				246E27A4249725260034B91B /* LaunchScreen.storyboard in Resources */,
 				246E27F7249C96CC0034B91B /* TweetTableViewCell.xib in Resources */,
+				24A4322D24B213D600F53E43 /* Profile.storyboard in Resources */,
 				246E27D62498F1740034B91B /* Home.storyboard in Resources */,
 				246E27CD24972C420034B91B /* Welcome.storyboard in Resources */,
 				246E27A1249725260034B91B /* Assets.xcassets in Resources */,
@@ -556,6 +571,7 @@
 				246E27ED2498FFB60034B91B /* PostLocation.swift in Sources */,
 				246E2798249725220034B91B /* AppDelegate.swift in Sources */,
 				246E27DD2498FD5B0034B91B /* ErrorResponse.swift in Sources */,
+				24A4322F24B2F5E500F53E43 /* ProfileViewController.swift in Sources */,
 				246E27EF2499001F0034B91B /* EndPoints.swift in Sources */,
 				246E27E52498FDFF0034B91B /* LoginRequest.swift in Sources */,
 			);

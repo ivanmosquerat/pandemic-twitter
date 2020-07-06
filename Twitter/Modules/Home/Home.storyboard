@@ -20,9 +20,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nee-dU-93s">
-                                <rect key="frame" x="338" y="812" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nee-dU-93s">
+                                <rect key="frame" x="334" y="792" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="FRv-Of-Wlz"/>
+                                    <constraint firstAttribute="height" constant="50" id="T5o-Tl-wp7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="pencil" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="heavy">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.conerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="evn-G8-Edf" kind="presentation" modalPresentationStyle="fullScreen" id="t1Z-LF-TnF"/>
                                 </connections>
@@ -40,13 +56,19 @@
                         <viewLayoutGuide key="safeArea" id="iJM-kj-Ykd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tweets" id="Zbf-l5-dJb">
-                        <barButtonItem key="rightBarButtonItem" title="Ver mapa" id="LH9-3D-0S9">
+                        <barButtonItem key="leftBarButtonItem" title="Ver mapa" id="LH9-3D-0S9">
                             <connections>
-                                <segue destination="DyM-fa-weu" kind="show" identifier="showMap" id="vBq-qM-biF"/>
+                                <segue destination="DyM-fa-weu" kind="show" id="vBq-qM-biF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.crop.circle.fill" catalog="system" id="8Vb-cG-2U3">
+                            <connections>
+                                <segue destination="gc4-Mz-TFx" kind="show" id="w86-mQ-SOg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="postButton" destination="Nee-dU-93s" id="oL4-IG-Ej9"/>
                         <outlet property="tableView" destination="bw0-KD-yGS" id="j1y-lT-mSO"/>
                     </connections>
                 </viewController>
@@ -151,36 +173,38 @@
             </objects>
             <point key="canvasLocation" x="1459" y="-42"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="9cO-AI-qqg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="gc4-Mz-TFx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3tT-va-Gra"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkS-Ko-zbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="-636"/>
+        </scene>
         <!--Mapa-->
         <scene sceneID="7tO-hM-TQ6">
             <objects>
-                <viewController id="DyM-fa-weu" customClass="MapViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DyM-fa-weu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mPj-IT-sYp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UX-Pl-P4U">
-                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1UX-Pl-P4U">
+                                <rect key="frame" x="87" y="359" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="1UX-Pl-P4U" firstAttribute="leading" secondItem="eQV-Ku-DFx" secondAttribute="leading" id="6pt-GA-o7m"/>
-                            <constraint firstItem="eQV-Ku-DFx" firstAttribute="trailing" secondItem="1UX-Pl-P4U" secondAttribute="trailing" id="8uQ-hF-MXa"/>
-                            <constraint firstItem="1UX-Pl-P4U" firstAttribute="top" secondItem="eQV-Ku-DFx" secondAttribute="top" id="98q-Uj-52V"/>
-                            <constraint firstItem="eQV-Ku-DFx" firstAttribute="bottom" secondItem="1UX-Pl-P4U" secondAttribute="bottom" constant="-34" id="qXI-GG-C46"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eQV-Ku-DFx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mapa" id="hXY-E1-q6L"/>
-                    <connections>
-                        <outlet property="mapContainer" destination="1UX-Pl-P4U" id="CI2-0x-cHd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6f-Iy-G2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457.9710144927537" y="-705.13392857142856"/>
+            <point key="canvasLocation" x="1458" y="-705"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Za-az-q08">
@@ -203,5 +227,7 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

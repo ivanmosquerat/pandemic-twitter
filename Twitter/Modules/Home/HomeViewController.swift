@@ -16,12 +16,14 @@ import AVKit
 class HomeViewController: UIViewController {
     
     // MARK: - Outlets
+    @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
     
     private let cellId = "TweetTableViewCell"
     private var dataSource = [Post]()
+    private var storage = UserDefaults.standard
 
     // MARK: - Lifecycle methods
     
@@ -39,6 +41,10 @@ class HomeViewController: UIViewController {
     //MARK: - Private methods
     
     private func setupUi(){
+        postButton.layer.cornerRadius = postButton.frame.width / 2
+        postButton.layer.masksToBounds = false
+        postButton.clipsToBounds = true
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
